@@ -6,7 +6,7 @@ services:
     ports: ["8080:80"]
     depends_on: [graphql_api]
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
       - ./nginx/modsecurity.conf:/etc/modsecurity.d/include.conf:ro
     networks: [labnet]
 
