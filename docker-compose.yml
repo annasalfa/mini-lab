@@ -45,7 +45,7 @@ services:
       - POSTGRES_DB=labdb
     ports: ["5433:5432"]
     volumes:
-      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ./postgres:/docker-entrypoint-initdb.d:ro
     networks: [labnet]
 
   graphql_api:
